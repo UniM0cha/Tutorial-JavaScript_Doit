@@ -6,7 +6,18 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ) {
-   
+   $(".btn1").click(() => {
+	   $(".btn1").parent().next().css({color : "#f00"});
+   });
+
+   $(".btn2").on({
+	   "mouseover focus" : () => {
+		   $(".btn2").parent().next().css({color : "#0f0"});
+	   },
+	   "mouseout blur" : () => {
+		   $(".btn2").parent().next().css({color : "#000"});
+	   },
+   });
 });
 </script>
 </head>
